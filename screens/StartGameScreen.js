@@ -31,7 +31,7 @@ inputContainer : {
     padding: 16,
     marginTop:100,
     marginHorizontal: 24,
-    backgroundColor:'#72063c',
+    backgroundColor:'#260078',
     color:'white',
     borderRadius:8,
     elevation:4,
