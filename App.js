@@ -4,15 +4,18 @@ import StartGameScreen from './screens/StartGameScreen';
 
 export default function App() {
   return (
-    <StartGameScreen />
+  <View style={styles.rootContainer}>
+  
+  
+  <StartGameScreen/>
+  </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  rootContainer: {
+    backgroundColor:'#6e34eb',
+    flex:1,
+    justifyContent:' space-between',
   },
 });
