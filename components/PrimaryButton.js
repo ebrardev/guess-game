@@ -23,8 +23,8 @@ export default PrimaryButton;
 const styles = StyleSheet.create({
     container: {
         backgroundColor:'yellow',
-        padding:16,
-        marginVertical:8,
+        padding:8,
+        marginVertical:4,
         borderRadius:8,
         elevation:2,
         shadowColor:'black',

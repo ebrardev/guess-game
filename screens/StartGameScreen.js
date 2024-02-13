@@ -12,8 +12,14 @@ function StartGameScreen() {
             autoCorrect={false}
             placeholder="31"
          />
-   <PrimaryButton>Reset </PrimaryButton>
+   <View style={styles.buttons}>
+    <View style={styles.buttonContainer}>
+    <PrimaryButton>Reset </PrimaryButton>
+    </View>
+  <View style={styles.buttonContainer}>
     <PrimaryButton>Confirm </PrimaryButton>
+    </View>
+   </View>
     </View>
     )
 }
@@ -45,5 +51,14 @@ numberInput :{
     marginVertical:8,
     fontWeight:'bold',
    textAlign:'center'
+},
+buttons:{
+    flexDirection:'row',
+    padding:8,
+    gap:8,
+},
+buttonContainer :{
+    flex:1,
+
 }
 })
