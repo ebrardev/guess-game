@@ -2,6 +2,7 @@
 import { TextInput,Button, View,StyleSheet,Alert } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import React, { useState } from "react";
+import Colors from "../constants/colors";
 
 function StartGameScreen({onPickNumber}) {
   const [enteredValue, setEnteredValue] = useState('');
@@ -51,7 +52,7 @@ inputContainer : {
     padding: 16,
     marginTop:100,
     marginHorizontal: 24,
-    backgroundColor:'#260078',
+    backgroundColor:Colors.primary700,
     color:'white',
     borderRadius:8,
     elevation:4,
