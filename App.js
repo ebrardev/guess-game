@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,ImageBackground } from 'react-native';
+import { StyleSheet, Text, View,ImageBackground ,SafeAreaView} from 'react-native';
 import StartGameScreen from './screens/StartGameScreen';
 import  {LinearGradient} from 'expo-linear-gradient';
 import { useState } from 'react';
@@ -21,7 +21,9 @@ export default function App() {
   resizeMode='cover' 
   imageStyle={{opacity:0.30}}
   >
+  <SafeAreaView style={styles.View}>
   {screen}
+  </SafeAreaView>
   </ImageBackground>
 
   
@@ -36,4 +38,8 @@ const styles = StyleSheet.create({
     flex:1,
    
   },
+  View: {
+    flex:1,
+  
+  }
 });
