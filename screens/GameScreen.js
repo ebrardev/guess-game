@@ -59,7 +59,7 @@ function GameScreen ({userNumber,onGameOver}) {
         
                 </Card>
           
-            {/* <View> Log rounds</View> */}
+ 
         </View>
     )
 
