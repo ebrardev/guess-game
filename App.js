@@ -11,6 +11,7 @@ export default function App() {
 
   function pickedNumberHandler(pickedNumber){
     setUserNumber(pickedNumber);
+    setGameIsOver(false);
   }
   function gameOverHandler() {
     setGameIsOver(true);
@@ -20,7 +21,7 @@ export default function App() {
     screen = <GameScreen userNumber={userNumber}  onGameOver = {gameOverHandler} onPickNumber = {pickedNumberHandler} />
   }
 
-   if (gameIsOver) {
+   if (gameIsOver && userNumber) {
     screen = <GameOverScreen onPickNumber={pickedNumberHandler} />;
   }
 
