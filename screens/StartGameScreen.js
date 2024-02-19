@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Colors from "../constants/colors";
 import Title from "../components/ui/Title";
 import Card from "../components/ui/Card";
-import InstText from "../components/InstText";
+import InstText from "../components/ui/InstText";
 function StartGameScreen({ onPickNumber }) {
     const [enteredValue, setEnteredValue] = useState('');
 
