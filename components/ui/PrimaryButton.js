@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     text: {
         color:'black',
         fontWeight:'bold',
-        textAlign:'center'
-        
+        textAlign:'center',
+        alignItems:'center',
     }
 
 })
