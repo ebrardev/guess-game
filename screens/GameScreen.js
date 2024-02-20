@@ -26,7 +26,7 @@ function GameScreen ({userNumber,onGameOver}) {
 
     useEffect(() => {
         if(currentGuess === userNumber){
-           onGameOver();
+           onGameOver(guessRounds.length);
         }
     }
     ,[currentGuess,userNumber, onGameOver]);
@@ -80,12 +80,18 @@ setGuessRounds(
         
                 </Card>
           
- <View> 
-  <FlatList data={guessRounds} renderItem={(itemData) => <GuessLogItem
-   roundNumber={guessRoundsHandler - itemData.index} 
-  guess={itemData.item} /> }
-  keyExtractor={(item)=> item.toString()}
-  />
+ <View style= {styles.listContainer}> 
+ <FlatList
+  data={guessRounds}
+  renderItem={(itemData) => (
+    <GuessLogItem
+      roundNumber={guessRoundsHandler - itemData.index}
+      guess={itemData.item}
+    />
+  )}
+  keyExtractor={(item, index) => index.toString()} // Her bir öğenin indeksini kullanarak benzersiz anahtarlar oluştur
+/>
+
  </View>
         </View>
     )
@@ -103,6 +109,10 @@ const styles = StyleSheet.create({
         marginBottom:12,
     },
 
+    listContainer : {
+        flex:1,
+        padding:16,
+    },
     buttonsContainer: {
         flexDirection:'row',
         justifyContent:'space-around',
