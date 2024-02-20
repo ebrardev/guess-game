@@ -10,6 +10,7 @@ import AppLoading from 'expo-app-loading';
 export default function App() {
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setGameIsOver] = useState(true);
+  const [guessRounds, setGuessRounds] = useState(0);
 
  
   function pickedNumberHandler(pickedNumber){
@@ -19,13 +20,17 @@ export default function App() {
   function gameOverHandler() {
     setGameIsOver(true);
   } 
+  function startNewGameHandler() {
+    setGuessRounds(0);
+    setUserNumber(null);
+  }
   let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
   if(userNumber){
     screen = <GameScreen userNumber={userNumber}  onGameOver = {gameOverHandler} onPickNumber = {pickedNumberHandler} />
   }
 
    if (gameIsOver && userNumber) {
-    screen = <GameOverScreen onPickNumber={pickedNumberHandler} />;
+    screen = <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={ startNewGameHandler} onPickNumber={pickedNumberHandler} />;
   }
 
   return (
