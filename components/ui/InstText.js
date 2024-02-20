@@ -1,8 +1,8 @@
 import { Text, View, StyleSheet } from "react-native";
 
-function InstText({children}) {
+function InstText({children,style}) {
     return (
-        <Text style={styles.intText}>{children}</Text>
+        <Text style={[styles.intText,style]}>{children}</Text>
     )
 }
 
