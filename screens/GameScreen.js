@@ -6,6 +6,7 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import Card from "../components/ui/Card";
 import InstText from "../components/ui/InstText";
 
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 function generateRandomBetween(min,max,exclude) {
     const rndNum =  Math.floor(Math.random() * (max - min)) + min;
@@ -54,10 +55,14 @@ function GameScreen ({userNumber,onGameOver}) {
             <InstText style={styles.instText}> High or Lower ? </InstText>
                 <View style={styles.buttonsContainer}>
                     <View style={styles.buttonContainer}>
-                    <PrimaryButton onPress={nextGuessHandler.bind(this,'lower')} >-</PrimaryButton>
+                    <PrimaryButton onPress={nextGuessHandler.bind(this,'lower')} >
+                    <MaterialIcons name="remove" size={24} color="black" />
+                    </PrimaryButton>
                     </View>
              <View  style={styles.buttonContainer}>
-                <PrimaryButton onPress={nextGuessHandler.bind(this,"greater")} >+</PrimaryButton>
+                <PrimaryButton onPress={nextGuessHandler.bind(this,"greater")} >
+                <AntDesign name="plus" size={24} color="black" />
+                </PrimaryButton>
              </View>
               
                 </View>
